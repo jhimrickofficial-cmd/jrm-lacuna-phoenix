@@ -54,8 +54,13 @@
   --container: 1380px;
   --gutter: clamp(22px,5.3vw,100px);
 }
-*,*::before,*::after { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
+*,*::before,*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--header-h);
+}
 body {
   margin: 0;
   background: var(--cream);
@@ -64,20 +69,36 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: clip;
 }
-img { display: block; max-width: 100%; }
-a { color: inherit; text-decoration: none; }
-button { font: inherit; }
-button,a { -webkit-tap-highlight-color: transparent; }
+img {
+  display: block;
+  max-width: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+}
+button,a {
+  -webkit-tap-highlight-color: transparent;
+}
 button:focus-visible,a:focus-visible {
   outline: 2px solid var(--terra);
   outline-offset: 5px;
 }
-::selection { background: var(--terra); color: #fff; }
+::selection {
+  background: var(--terra);
+  color: #fff;
+}
 .container {
   width: min(100% - 2 * var(--gutter),var(--container));
   margin-inline: auto;
 }
-.serif { font-family: var(--serif); font-weight: 400; }
+.serif {
+  font-family: var(--serif);
+  font-weight: 400;
+}
 .eyebrow {
   font-size: 10px;
   font-weight: 700;
@@ -96,11 +117,23 @@ button:focus-visible,a:focus-visible {
   line-height: 1.85;
   color: var(--muted);
 }
-.text-light { color: var(--ivory); }
-.accent { color: var(--terra); }
-.section-pad { padding-block: clamp(100px,12vw,200px); }
-.overflow-hidden { overflow: hidden; }
-.image-cover { width: 100%; height: 100%; object-fit: cover; }
+.text-light {
+  color: var(--ivory);
+}
+.accent {
+  color: var(--terra);
+}
+.section-pad {
+  padding-block: clamp(100px,12vw,200px);
+}
+.overflow-hidden {
+  overflow: hidden;
+}
+.image-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .btn {
   display: inline-flex;
@@ -115,36 +148,70 @@ button:focus-visible,a:focus-visible {
   letter-spacing: .16em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: background .3s ease,color .3s ease,border-color .3s ease;
+  transition:
+    background .3s ease,
+    color .3s ease,
+    border-color .3s ease;
 }
 .btn svg {
   width: 17px;
   height: 17px;
   transition: transform .3s ease;
 }
-.btn:hover svg { transform: translate(4px,-3px); }
-.btn-light { background: var(--cream); color: var(--ink); }
-.btn-light:hover { background: var(--sand); }
-.btn-dark { background: var(--ink); color: var(--ivory); }
-.btn-dark:hover { background: var(--terra); }
+.btn:hover svg {
+  transform: translate(4px,-3px);
+}
+.btn-light {
+  background: var(--cream);
+  color: var(--ink);
+}
+.btn-light:hover {
+  background: var(--sand);
+}
+.btn-dark {
+  background: var(--ink);
+  color: var(--ivory);
+}
+.btn-dark:hover {
+  background: var(--terra);
+}
 .btn-outline-light {
   border-color: rgba(255,255,255,.55);
   color: #fff;
   background: transparent;
 }
-.btn-outline-light:hover { background: rgba(255,255,255,.12); }
-.btn-outline-dark { color: var(--ink); border-color: var(--ink); }
-.btn-outline-dark:hover { background: var(--ink); color: var(--ivory); }
+.btn-outline-light:hover {
+  background: rgba(255,255,255,.12);
+}
+.btn-outline-dark {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+.btn-outline-dark:hover {
+  background: var(--ink);
+  color: var(--ivory);
+}
 
 .reveal {
   opacity: 0;
   transform: translate3d(0,35px,0);
-  transition: opacity .85s ease,transform .85s cubic-bezier(.2,.7,.2,1);
+  transition:
+    opacity .85s ease,
+    transform .85s cubic-bezier(.2,.7,.2,1);
 }
-.reveal.is-visible { opacity: 1; transform: none; }
-.reveal-delay-1 { transition-delay: .12s; }
-.reveal-delay-2 { transition-delay: .24s; }
-.reveal-delay-3 { transition-delay: .36s; }
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+.reveal-delay-1 {
+  transition-delay: .12s;
+}
+.reveal-delay-2 {
+  transition-delay: .24s;
+}
+.reveal-delay-3 {
+  transition-delay: .36s;
+}
 
 /* =========================================================
    HEADER & NAVIGATION
@@ -157,7 +224,10 @@ button:focus-visible,a:focus-visible {
   display: flex;
   align-items: center;
   color: #fff;
-  transition: background .35s,color .35s,box-shadow .35s;
+  transition:
+    background .35s,
+    color .35s,
+    box-shadow .35s;
 }
 .site-header.scrolled,
 .site-header.menu-open {
@@ -179,9 +249,19 @@ button:focus-visible,a:focus-visible {
   gap: 12px;
   flex-shrink: 0;
 }
-.brand-mark { width: 32px; height: 36px; }
-.brand-mark path,.brand-mark circle { stroke: currentColor; }
-.brand-words { display: flex; flex-direction: column; gap: 1px; }
+.brand-mark {
+  width: 32px;
+  height: 36px;
+}
+.brand-mark path,
+.brand-mark circle {
+  stroke: currentColor;
+}
+.brand-words {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
 .brand-name {
   font-family: var(--serif);
   font-size: 27px;
@@ -221,7 +301,9 @@ button:focus-visible,a:focus-visible {
   transform-origin: left;
   transition: transform .3s;
 }
-.desktop-nav a:hover::after { transform: scaleX(1); }
+.desktop-nav a:hover::after {
+  transform: scaleX(1);
+}
 .nav-cta {
   border: 1px solid currentColor;
   padding: 14px 20px;
@@ -280,9 +362,12 @@ button:focus-visible,a:focus-visible {
   font-size: 32px;
   border-bottom: 1px solid var(--line);
 }
-.mobile-nav a:last-child { font-size: 22px; }
-.menu-open .mobile-nav { display: flex; }
-
+.mobile-nav a:last-child {
+  font-size: 22px;
+}
+.menu-open .mobile-nav {
+  display: flex;
+}
 .progress-top {
   position: fixed;
   z-index: 1100;
@@ -371,8 +456,13 @@ button:focus-visible,a:focus-visible {
   max-width: 850px;
   margin: 0 0 25px;
 }
-.hero-title span { display: block; }
-.hero-title em { color: #e6c9ae; font-weight: 400; }
+.hero-title span {
+  display: block;
+}
+.hero-title em {
+  color: #e6c9ae;
+  font-weight: 400;
+}
 .hero-description {
   max-width: 430px;
   font-size: clamp(14px,1.1vw,16px);
@@ -386,7 +476,9 @@ button:focus-visible,a:focus-visible {
   flex-wrap: wrap;
   gap: 14px;
 }
-.hero-actions .btn { min-height: 52px; }
+.hero-actions .btn {
+  min-height: 52px;
+}
 .hero-location {
   position: absolute;
   right: var(--gutter);
@@ -433,13 +525,18 @@ button:focus-visible,a:focus-visible {
   animation: scrollLine 2.2s ease-in-out infinite;
 }
 @keyframes scrollLine {
-  to { transform: translateY(90px); }
+  to {
+    transform: translateY(90px);
+  }
 }
 
 /* =========================================================
    SECTION 02 — EXPERIENCE
 ========================================================= */
-.experience { background: var(--cream); position: relative; }
+.experience {
+  background: var(--cream);
+  position: relative;
+}
 .section-index {
   display: inline-flex;
   align-items: center;
@@ -477,8 +574,12 @@ button:focus-visible,a:focus-visible {
   letter-spacing: .14em;
   text-transform: uppercase;
 }
-.text-link span { transition: transform .3s; }
-.text-link:hover span { transform: translateX(6px); }
+.text-link span {
+  transition: transform .3s;
+}
+.text-link:hover span {
+  transform: translateX(6px);
+}
 .experience-visual {
   position: relative;
   padding: 40px 40px 65px 0;
@@ -553,7 +654,9 @@ button:focus-visible,a:focus-visible {
   transform: scale(1.045);
   will-change: opacity,transform;
 }
-.story-image:first-child { opacity: 1; }
+.story-image:first-child {
+  opacity: 1;
+}
 .story-shade {
   position: absolute;
   inset: 0;
@@ -601,7 +704,10 @@ button:focus-visible,a:focus-visible {
   font-size: clamp(75px,9vw,150px);
   margin: 0 0 26px;
 }
-.story-heading em { font-weight: 400; color: #e4c4a6; }
+.story-heading em {
+  font-weight: 400;
+  color: #e4c4a6;
+}
 .story-description {
   max-width: 460px;
   font-size: 16px;
@@ -630,7 +736,9 @@ button:focus-visible,a:focus-visible {
   font-family: var(--serif);
   font-size: 35px;
 }
-.story-counter span { color: var(--sand); }
+.story-counter span {
+  color: var(--sand);
+}
 .story-counter small {
   font-family: var(--sans);
   font-size: 11px;
@@ -638,7 +746,7 @@ button:focus-visible,a:focus-visible {
 }
 
 /* =========================================================
-   SECTION 04 — STATEMENT
+   SECTION 04 — FULL BLEED STATEMENT
 ========================================================= */
 .statement {
   position: relative;
@@ -666,7 +774,9 @@ button:focus-visible,a:focus-visible {
   background: rgba(23,15,11,.51);
   z-index: -1;
 }
-.statement-inner { text-align: center; }
+.statement-inner {
+  text-align: center;
+}
 .statement-line {
   width: 1px;
   height: 70px;
@@ -678,7 +788,10 @@ button:focus-visible,a:focus-visible {
   font-size: clamp(75px,10vw,170px);
   margin: 20px 0;
 }
-.statement h2 em { font-weight: 400; color: #edd1b9; }
+.statement h2 em {
+  font-weight: 400;
+  color: #edd1b9;
+}
 .statement-sub {
   font-size: 11px;
   letter-spacing: .16em;
@@ -687,10 +800,11 @@ button:focus-visible,a:focus-visible {
 }
 
 /* =========================================================
-   SECTION 05 — DISCOVER
-   NEW IMAGE ASSETS: lacuna11.png / lacuna12.png
+   SECTION 05 — INSIDE LACUNA
 ========================================================= */
-.discover { background: var(--ivory); }
+.discover {
+  background: var(--ivory);
+}
 .discover-header {
   display: flex;
   justify-content: space-between;
@@ -715,7 +829,9 @@ button:focus-visible,a:focus-visible {
   position: relative;
   margin-top: 70px;
 }
-.discover-large .photo { aspect-ratio: .87; }
+.discover-large .photo {
+  aspect-ratio: .87;
+}
 .photo {
   position: relative;
   overflow: hidden;
@@ -728,7 +844,9 @@ button:focus-visible,a:focus-visible {
   object-fit: cover;
   transition: transform .8s cubic-bezier(.2,.7,.2,1);
 }
-.photo:hover img { transform: scale(1.055); }
+.photo:hover img {
+  transform: scale(1.055);
+}
 .photo-label {
   display: flex;
   justify-content: space-between;
@@ -743,8 +861,12 @@ button:focus-visible,a:focus-visible {
   flex-direction: column;
   gap: 80px;
 }
-.discover-side .photo { aspect-ratio: .85; }
-.discover-side figure { margin: 0; }
+.discover-side .photo {
+  aspect-ratio: .85;
+}
+.discover-side figure {
+  margin: 0;
+}
 .discover-quote {
   font-family: var(--serif);
   font-size: clamp(35px,3.5vw,61px);
@@ -755,7 +877,7 @@ button:focus-visible,a:focus-visible {
   color: var(--brown);
 }
 
-/* Show readable fallback only if an image cannot load */
+/* Missing-image fallback */
 .photo.image-error::after {
   content: "Image unavailable";
   position: absolute;
@@ -769,12 +891,16 @@ button:focus-visible,a:focus-visible {
   color: var(--brown);
   background: var(--sand);
 }
-.photo.image-error img { visibility: hidden; }
+.photo.image-error img {
+  visibility: hidden;
+}
 
 /* =========================================================
    SECTION 06 — COFFEE & MOMENTS
 ========================================================= */
-.moments { background: var(--cream); }
+.moments {
+  background: var(--cream);
+}
 .moments-head {
   text-align: center;
   max-width: 800px;
@@ -789,8 +915,12 @@ button:focus-visible,a:focus-visible {
   grid-template-columns: repeat(3,minmax(0,1fr));
   gap: clamp(15px,2.5vw,45px);
 }
-.moment:nth-child(2) { margin-top: 90px; }
-.moment:nth-child(3) { margin-top: 180px; }
+.moment:nth-child(2) {
+  margin-top: 90px;
+}
+.moment:nth-child(3) {
+  margin-top: 180px;
+}
 .moment-image {
   aspect-ratio: .76;
   overflow: hidden;
@@ -802,7 +932,9 @@ button:focus-visible,a:focus-visible {
   object-fit: cover;
   transition: transform .7s ease;
 }
-.moment:hover .moment-image img { transform: scale(1.065); }
+.moment:hover .moment-image img {
+  transform: scale(1.065);
+}
 .moment-meta {
   display: flex;
   justify-content: space-between;
@@ -824,7 +956,8 @@ button:focus-visible,a:focus-visible {
 }
 
 /* =========================================================
-   SECTION 07 — GALLERY
+   SECTION 07 — LIFE AT LACUNA
+   UPDATED GALLERY IMAGES 03 AND 05
 ========================================================= */
 .gallery-section {
   padding: 125px 0 140px;
@@ -843,7 +976,10 @@ button:focus-visible,a:focus-visible {
   margin: 25px 0 0;
   font-size: clamp(70px,8.5vw,135px);
 }
-.gallery-controls { display: flex; gap: 10px; }
+.gallery-controls {
+  display: flex;
+  gap: 10px;
+}
 .gallery-arrow {
   display: grid;
   place-items: center;
@@ -855,8 +991,13 @@ button:focus-visible,a:focus-visible {
   cursor: pointer;
   transition: background .25s;
 }
-.gallery-arrow:hover { background: var(--terra); }
-.gallery-arrow svg { width: 22px; height: 22px; }
+.gallery-arrow:hover {
+  background: var(--terra);
+}
+.gallery-arrow svg {
+  width: 22px;
+  height: 22px;
+}
 .gallery-track {
   display: flex;
   gap: 22px;
@@ -868,13 +1009,17 @@ button:focus-visible,a:focus-visible {
   padding-right: var(--gutter);
   scroll-behavior: smooth;
 }
-.gallery-track::-webkit-scrollbar { display: none; }
+.gallery-track::-webkit-scrollbar {
+  display: none;
+}
 .gallery-item {
   margin: 0;
   flex: 0 0 clamp(300px,44vw,720px);
   scroll-snap-align: start;
 }
-.gallery-item .photo { aspect-ratio: 1.24; }
+.gallery-item .photo {
+  aspect-ratio: 1.24;
+}
 .gallery-item figcaption {
   margin-top: 17px;
   color: #d4c6b7;
@@ -887,9 +1032,10 @@ button:focus-visible,a:focus-visible {
 
 /* =========================================================
    SECTION 08 — VISIT
-   NEW IMAGE ASSET: lacuna13.png
 ========================================================= */
-.visit { background: var(--ivory); }
+.visit {
+  background: var(--ivory);
+}
 .visit-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -900,15 +1046,21 @@ button:focus-visible,a:focus-visible {
   font-size: clamp(70px,8.5vw,145px);
   margin: 35px 0;
 }
-.visit-lead { max-width: 430px; }
+.visit-lead {
+  max-width: 430px;
+}
 .visit-details {
   margin: 45px 0;
   padding: 28px 0;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
-.visit-details div { margin-bottom: 21px; }
-.visit-details div:last-child { margin-bottom: 0; }
+.visit-details div {
+  margin-bottom: 21px;
+}
+.visit-details div:last-child {
+  margin-bottom: 0;
+}
 .visit-details strong {
   display: block;
   font-size: 10px;
@@ -921,8 +1073,12 @@ button:focus-visible,a:focus-visible {
   font-family: var(--serif);
   font-size: 27px;
 }
-.visit-visual { position: relative; }
-.visit-visual .photo { aspect-ratio: .77; }
+.visit-visual {
+  position: relative;
+}
+.visit-visual .photo {
+  aspect-ratio: .77;
+}
 .visit-visual .visit-badge {
   position: absolute;
   left: -30px;
@@ -976,8 +1132,15 @@ button:focus-visible,a:focus-visible {
   max-width: 1200px;
   margin: 32px 0 42px;
 }
-.closing h2 em { font-weight: 400; color: #e9c4aa; }
-.closing-actions { display: flex; flex-wrap: wrap; gap: 15px; }
+.closing h2 em {
+  font-weight: 400;
+  color: #e9c4aa;
+}
+.closing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 
 /* =========================================================
    FOOTER
@@ -993,7 +1156,9 @@ button:focus-visible,a:focus-visible {
   gap: 60px;
   padding-bottom: 90px;
 }
-.footer-logo .brand-name { font-size: 36px; }
+.footer-logo .brand-name {
+  font-size: 36px;
+}
 .footer-intro {
   max-width: 300px;
   color: #b9a99c;
@@ -1012,7 +1177,8 @@ button:focus-visible,a:focus-visible {
   text-transform: uppercase;
   margin: 0 0 25px;
 }
-.footer-links a,.footer-links p {
+.footer-links a,
+.footer-links p {
   display: block;
   margin: 0 0 15px;
   color: #d4c6ba;
@@ -1020,7 +1186,9 @@ button:focus-visible,a:focus-visible {
   line-height: 1.6;
   transition: color .2s;
 }
-.footer-links a:hover { color: white; }
+.footer-links a:hover {
+  color: white;
+}
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,.13);
   padding-top: 26px;
@@ -1033,49 +1201,109 @@ button:focus-visible,a:focus-visible {
 }
 
 /* =========================================================
-   RESPONSIVE
+   RESPONSIVE — LARGE TABLET
 ========================================================= */
 @media(max-width:1100px) {
-  :root { --header-h: 76px; }
-  .desktop-nav { gap: 18px; }
-  .desktop-nav a:not(.nav-cta) { font-size: 9px; }
-  .experience-grid { gap: 60px; }
-  .experience-stamp { right: -10px; }
-  .hero-title { font-size: clamp(65px,8vw,94px); }
+  :root {
+    --header-h: 76px;
+  }
+  .desktop-nav {
+    gap: 18px;
+  }
+  .desktop-nav a:not(.nav-cta) {
+    font-size: 9px;
+  }
+  .experience-grid {
+    gap: 60px;
+  }
+  .experience-stamp {
+    right: -10px;
+  }
+  .hero-title {
+    font-size: clamp(65px,8vw,94px);
+  }
 }
 
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
 @media(max-width:850px) {
-  :root { --header-h: 72px; }
-  .desktop-nav { display: none; }
-  .menu-toggle { display: flex; }
-  .hero-title { font-size: clamp(65px,9.5vw,88px); }
+  :root {
+    --header-h: 72px;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .hero-title {
+    font-size: clamp(65px,9.5vw,88px);
+  }
   .hero-content {
     padding-top: calc(var(--header-h) + 30px);
     padding-bottom: 85px;
   }
-  .experience-grid,.visit-layout { grid-template-columns: 1fr; }
-  .experience-content { max-width: 630px; }
-  .experience-visual { width: min(100%,560px); margin: 0 auto; }
-  .discover-header { display: block; }
-  .discover-header .body-copy { margin-top: 25px; }
-  .moments-grid { gap: 18px; }
-  .moment:nth-child(2) { margin-top: 55px; }
-  .moment:nth-child(3) { margin-top: 110px; }
-  .moment h3 { font-size: 41px; }
-  .footer-main { flex-wrap: wrap; }
+  .experience-grid,
+  .visit-layout {
+    grid-template-columns: 1fr;
+  }
+  .experience-content {
+    max-width: 630px;
+  }
+  .experience-visual {
+    width: min(100%,560px);
+    margin: 0 auto;
+  }
+  .discover-header {
+    display: block;
+  }
+  .discover-header .body-copy {
+    margin-top: 25px;
+  }
+  .moments-grid {
+    gap: 18px;
+  }
+  .moment:nth-child(2) {
+    margin-top: 55px;
+  }
+  .moment:nth-child(3) {
+    margin-top: 110px;
+  }
+  .moment h3 {
+    font-size: 41px;
+  }
+  .footer-main {
+    flex-wrap: wrap;
+  }
 }
 
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
 @media(max-width:600px) {
   :root {
     --gutter: 23px;
     --header-h: 68px;
   }
-  .section-pad { padding-block: 90px; }
-  .brand-name { font-size: 24px; }
-  .brand-mark { width: 27px; }
 
-  .hero { min-height: 700px; height: 100svh; }
-  .hero-image { background-position: 54% center; }
+  .section-pad {
+    padding-block: 90px;
+  }
+  .brand-name {
+    font-size: 24px;
+  }
+  .brand-mark {
+    width: 27px;
+  }
+
+  .hero {
+    min-height: 700px;
+    height: 100svh;
+  }
+  .hero-image {
+    background-position: 54% center;
+  }
   .hero-content {
     padding-top: calc(var(--header-h) + 30px);
     padding-bottom: 80px;
@@ -1085,7 +1313,9 @@ button:focus-visible,a:focus-visible {
     margin-bottom: 20px;
     gap: 10px;
   }
-  .hero-kicker::before { width: 23px; }
+  .hero-kicker::before {
+    width: 23px;
+  }
   .hero-title {
     font-size: clamp(54px,12.5vw,75px);
     line-height: .9;
@@ -1099,7 +1329,10 @@ button:focus-visible,a:focus-visible {
     max-width: 340px;
     margin-bottom: 23px;
   }
-  .hero-actions { align-items: stretch; gap: 12px; }
+  .hero-actions {
+    align-items: stretch;
+    gap: 12px;
+  }
   .hero-actions .btn {
     min-height: 48px;
     padding: 13px 15px;
@@ -1111,69 +1344,149 @@ button:focus-visible,a:focus-visible {
     bottom: 22px;
     font-size: 8px;
   }
-  .hero-scroll { bottom: 18px; font-size: 8px; }
-  .scroll-line { height: 28px; }
+  .hero-scroll {
+    bottom: 18px;
+    font-size: 8px;
+  }
+  .scroll-line {
+    height: 28px;
+  }
 
-  .experience-title,.visit h2 {
+  .experience-title,
+  .visit h2 {
     font-size: clamp(62px,13vw,89px);
   }
-  .experience-visual { padding: 0 20px 42px 0; }
+  .experience-visual {
+    padding: 0 20px 42px 0;
+  }
   .experience-stamp {
     width: 130px;
     height: 130px;
     right: 0;
     bottom: 0;
   }
-  .experience-stamp strong { font-size: 26px; }
-  .experience-stamp small { font-size: 7px; }
+  .experience-stamp strong {
+    font-size: 26px;
+  }
+  .experience-stamp small {
+    font-size: 7px;
+  }
 
-  .story { height: 255svh; }
-  .story-sticky { min-height: 0; }
-  .story-top { top: max(95px,12vh); }
-  .story-copy { min-height: 360px; }
-  .story-heading { font-size: clamp(67px,13vw,90px); }
-  .story-description { font-size: 14px; max-width: 315px; }
-  .story-progress { width: 55%; bottom: 8%; }
-  .story-counter { bottom: 6%; font-size: 27px; }
+  .story {
+    height: 255svh;
+  }
+  .story-sticky {
+    min-height: 0;
+  }
+  .story-top {
+    top: max(95px,12vh);
+  }
+  .story-copy {
+    min-height: 360px;
+  }
+  .story-heading {
+    font-size: clamp(67px,13vw,90px);
+  }
+  .story-description {
+    font-size: 14px;
+    max-width: 315px;
+  }
+  .story-progress {
+    width: 55%;
+    bottom: 8%;
+  }
+  .story-counter {
+    bottom: 6%;
+    font-size: 27px;
+  }
 
-  .statement { min-height: 76svh; }
-  .statement h2 { font-size: clamp(64px,12vw,90px); }
-  .statement-line { height: 40px; }
+  .statement {
+    min-height: 76svh;
+  }
+  .statement h2 {
+    font-size: clamp(64px,12vw,90px);
+  }
+  .statement-line {
+    height: 40px;
+  }
 
-  .discover-header { margin-bottom: 45px; }
-  .discover-header h2 { font-size: 73px; }
-  .discover-gallery { grid-template-columns: 1fr; gap: 35px; }
-  .discover-large { margin-top: 0; }
+  .discover-header {
+    margin-bottom: 45px;
+  }
+  .discover-header h2 {
+    font-size: 73px;
+  }
+  .discover-gallery {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .discover-large {
+    margin-top: 0;
+  }
   .discover-side {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 18px;
     align-items: start;
   }
-  .discover-side .photo { aspect-ratio: .7; }
-  .discover-side .photo-label { font-size: 8px; }
+  .discover-side .photo {
+    aspect-ratio: .7;
+  }
+  .discover-side .photo-label {
+    font-size: 8px;
+  }
   .discover-quote {
     grid-column: 1 / -1;
     margin-top: 10px;
     font-size: 41px;
   }
 
-  .moments-head { margin-bottom: 48px; }
-  .moments-head h2 { font-size: 71px; }
-  .moments-grid { grid-template-columns: 1fr; gap: 55px; }
-  .moment:nth-child(n) { margin-top: 0; }
-  .moment-image { aspect-ratio: 1.1; }
-  .moment h3 { font-size: 52px; }
+  .moments-head {
+    margin-bottom: 48px;
+  }
+  .moments-head h2 {
+    font-size: 71px;
+  }
+  .moments-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+  .moment:nth-child(n) {
+    margin-top: 0;
+  }
+  .moment-image {
+    aspect-ratio: 1.1;
+  }
+  .moment h3 {
+    font-size: 52px;
+  }
 
-  .gallery-section { padding: 90px 0; }
-  .gallery-head { margin-bottom: 35px; }
-  .gallery-head h2 { font-size: 72px; }
-  .gallery-arrow { width: 42px; height: 42px; }
-  .gallery-item { flex-basis: 82vw; }
-  .gallery-item .photo { aspect-ratio: .86; }
+  .gallery-section {
+    padding: 90px 0;
+  }
+  .gallery-head {
+    margin-bottom: 35px;
+  }
+  .gallery-head h2 {
+    font-size: 72px;
+  }
+  .gallery-arrow {
+    width: 42px;
+    height: 42px;
+  }
+  .gallery-item {
+    flex-basis: 82vw;
+  }
+  .gallery-item .photo {
+    aspect-ratio: .86;
+  }
 
-  .visit-layout { gap: 50px; }
-  .visit-visual { padding-left: 12px; }
+  .visit-layout {
+    gap: 50px;
+  }
+  .visit-visual {
+    padding-left: 12px;
+  }
   .visit-visual .visit-badge {
     left: -12px;
     bottom: 20px;
@@ -1181,23 +1494,46 @@ button:focus-visible,a:focus-visible {
     padding: 20px;
   }
 
-  .closing { min-height: 82svh; padding: 90px 0; }
-  .closing h2 { font-size: clamp(64px,13vw,95px); }
+  .closing {
+    min-height: 82svh;
+    padding: 90px 0;
+  }
+  .closing h2 {
+    font-size: clamp(64px,13vw,95px);
+  }
 
-  .footer { padding-top: 70px; }
-  .footer-main { padding-bottom: 45px; gap: 50px; }
-  .footer-links { flex-wrap: wrap; gap: 45px; }
-  .footer-bottom { flex-direction: column; gap: 10px; }
+  .footer {
+    padding-top: 70px;
+  }
+  .footer-main {
+    padding-bottom: 45px;
+    gap: 50px;
+  }
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 45px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
+/* =========================================================
+   SHORT DESKTOP SCREENS
+========================================================= */
 @media (min-width:851px) and (max-height:820px) {
-  .hero { min-height: 700px; }
+  .hero {
+    min-height: 700px;
+  }
   .hero-title {
     font-size: clamp(62px,6.8vw,96px);
     line-height: .85;
     margin-bottom: 19px;
   }
-  .hero-kicker { margin-bottom: 18px; }
+  .hero-kicker {
+    margin-bottom: 18px;
+  }
   .hero-content {
     padding-top: calc(var(--header-h) + 24px);
     padding-bottom: 75px;
@@ -1207,11 +1543,15 @@ button:focus-visible,a:focus-visible {
     line-height: 1.65;
     margin-bottom: 20px;
   }
-  .hero-actions .btn { min-height: 48px; }
+  .hero-actions .btn {
+    min-height: 48px;
+  }
 }
 
 @media (max-height:680px) and (min-width:601px) {
-  .hero { min-height: 680px; }
+  .hero {
+    min-height: 680px;
+  }
   .hero-title {
     font-size: clamp(58px,6vw,80px);
     line-height: .83;
@@ -1220,19 +1560,38 @@ button:focus-visible,a:focus-visible {
     padding-top: calc(var(--header-h) + 20px);
     padding-bottom: 65px;
   }
-  .hero-kicker { margin-bottom: 14px; }
-  .hero-description { margin-bottom: 17px; }
+  .hero-kicker {
+    margin-bottom: 14px;
+  }
+  .hero-description {
+    margin-bottom: 17px;
+  }
 }
 
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
 @media(prefers-reduced-motion:reduce) {
-  html,.gallery-track { scroll-behavior: auto !important; }
-  *,*::before,*::after {
+  html,
+  .gallery-track {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
     animation-duration: .01ms !important;
     transition-duration: .01ms !important;
   }
-  .reveal { opacity: 1; transform: none; }
-  .hero-image,.statement-photo,.closing-image,
-  .experience-frame img { transform: none !important; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .hero-image,
+  .statement-photo,
+  .closing-image,
+  .experience-frame img {
+    transform: none !important;
+  }
 }
 </style>
 </head>
@@ -1246,21 +1605,35 @@ button:focus-visible,a:focus-visible {
 <!-- SVG ICONS -->
 <svg aria-hidden="true" width="0" height="0" style="position:absolute">
   <symbol id="arrow-up-right" viewBox="0 0 24 24">
-    <path d="M5 19L19 5M7 5h12v12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M5 19L19 5M7 5h12v12"
+          fill="none" stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
   </symbol>
   <symbol id="arrow-right" viewBox="0 0 24 24">
-    <path d="M4 12h16m-7-7 7 7-7 7" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M4 12h16m-7-7 7 7-7 7"
+          fill="none" stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
   </symbol>
 </svg>
 
-<!-- HEADER -->
+<!-- =====================================================
+     HEADER
+===================================================== -->
 <header class="site-header" id="header">
   <div class="header-inner">
 
-    <a class="brand" href="#home" aria-label="Lacuna Phoenix, back to top">
-      <svg class="brand-mark" viewBox="0 0 40 46" fill="none" aria-hidden="true">
-        <path d="M20 3C9 11 5 20 5 28a15 15 0 0030 0C35 20 31 11 20 3Z" stroke-width="1.4"/>
-        <path d="M20 11v28M12 29h16M13 21c4-5 10-5 14 0" stroke-width="1.1"/>
+    <a class="brand" href="#home"
+       aria-label="Lacuna Phoenix, back to top">
+      <svg class="brand-mark" viewBox="0 0 40 46"
+           fill="none" aria-hidden="true">
+        <path d="M20 3C9 11 5 20 5 28a15 15 0 0030 0C35 20 31 11 20 3Z"
+              stroke-width="1.4"/>
+        <path d="M20 11v28M12 29h16M13 21c4-5 10-5 14 0"
+              stroke-width="1.1"/>
         <circle cx="20" cy="21" r="3" stroke-width="1.2"/>
       </svg>
       <span class="brand-words">
@@ -1276,7 +1649,8 @@ button:focus-visible,a:focus-visible {
       <a href="#visit">Visit</a>
       <a class="nav-cta"
          href="https://www.google.com/maps/search/?api=1&query=Lacuna+Phoenix"
-         target="_blank" rel="noopener noreferrer">
+         target="_blank"
+         rel="noopener noreferrer">
         Get Directions ↗
       </a>
     </nav>
@@ -1300,17 +1674,22 @@ button:focus-visible,a:focus-visible {
         Get Directions ↗
       </a>
     </nav>
+
   </div>
 </header>
 
 <main>
 
-<!-- SECTION 01: HERO -->
+<!-- =====================================================
+     SECTION 01: HERO
+===================================================== -->
 <section class="hero" id="home">
+
   <div class="hero-image" id="heroImage"></div>
   <div class="hero-grain"></div>
 
   <div class="container hero-content">
+
     <div class="hero-kicker eyebrow">
       DOWNTOWN PHOENIX · A SPACE TO UNWIND
     </div>
@@ -1340,20 +1719,26 @@ button:focus-visible,a:focus-visible {
         <svg><use href="#arrow-right"/></svg>
       </a>
     </div>
+
   </div>
 
   <a class="hero-scroll" href="#experience">
     <span class="scroll-line"></span>
     Scroll to explore
   </a>
+
   <div class="hero-location">
     Roosevelt Row · Phoenix, AZ
   </div>
+
 </section>
 
-<!-- SECTION 02: EXPERIENCE -->
+<!-- =====================================================
+     SECTION 02: THE EXPERIENCE
+===================================================== -->
 <section class="experience section-pad" id="experience">
   <div class="container experience-grid">
+
     <div class="experience-content">
       <span class="eyebrow section-index reveal">
         01 / THE EXPERIENCE
@@ -1381,7 +1766,9 @@ button:focus-visible,a:focus-visible {
       <div class="experience-frame reveal">
         <img src="lacuna1.png"
              alt="The welcoming Lacuna Phoenix café and lounge experience"
-             loading="lazy" decoding="async" id="experienceImg">
+             loading="lazy"
+             decoding="async"
+             id="experienceImg">
       </div>
       <div class="experience-stamp">
         <div>
@@ -1390,29 +1777,46 @@ button:focus-visible,a:focus-visible {
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- SECTION 03: STICKY STORY -->
-<section class="story" id="story" aria-label="Discover the Lacuna story">
+<!-- =====================================================
+     SECTION 03: STICKY STORYTELLING
+===================================================== -->
+<section class="story" id="story"
+         aria-label="Discover the Lacuna story">
+
   <div class="story-sticky">
+
     <div class="story-images">
-      <img class="story-image" src="lacuna2.png"
-           alt="Beautifully prepared drinks" loading="eager" decoding="async">
-      <img class="story-image" src="lacuna3.png"
-           alt="The atmosphere at Lacuna Phoenix" loading="eager" decoding="async">
-      <img class="story-image" src="lacuna5.png"
-           alt="Moments shared in a creative lounge" loading="eager" decoding="async">
+      <img class="story-image"
+           src="lacuna2.png"
+           alt="Beautifully prepared drinks"
+           loading="eager" decoding="async">
+      <img class="story-image"
+           src="lacuna3.png"
+           alt="The atmosphere at Lacuna Phoenix"
+           loading="eager" decoding="async">
+      <img class="story-image"
+           src="lacuna5.png"
+           alt="Moments shared in a creative lounge"
+           loading="eager" decoding="async">
     </div>
 
     <div class="story-shade"></div>
-    <div class="story-top eyebrow">THE ART OF BEING PRESENT</div>
+    <div class="story-top eyebrow">
+      THE ART OF BEING PRESENT
+    </div>
 
     <div class="container story-inner">
       <div class="story-copy">
+
         <article class="story-panel">
           <p class="story-number">01 / 03</p>
-          <h2 class="display story-heading">The <em>Craft.</em></h2>
+          <h2 class="display story-heading">
+            The <em>Craft.</em>
+          </h2>
           <p class="story-description">
             From familiar coffee comforts to imaginative alcohol-free
             drinks, every cup offers another reason to pause
@@ -1422,7 +1826,9 @@ button:focus-visible,a:focus-visible {
 
         <article class="story-panel">
           <p class="story-number">02 / 03</p>
-          <h2 class="display story-heading">The <em>Space.</em></h2>
+          <h2 class="display story-heading">
+            The <em>Space.</em>
+          </h2>
           <p class="story-description">
             An intimate meeting of warm surroundings, local creativity
             and an easygoing atmosphere. Find a corner,
@@ -1432,32 +1838,43 @@ button:focus-visible,a:focus-visible {
 
         <article class="story-panel">
           <p class="story-number">03 / 03</p>
-          <h2 class="display story-heading">The <em>Moment.</em></h2>
+          <h2 class="display story-heading">
+            The <em>Moment.</em>
+          </h2>
           <p class="story-description">
             Some of the best memories begin without a plan.
             A spontaneous conversation. A shared laugh.
             An evening that unfolds naturally.
           </p>
         </article>
+
       </div>
     </div>
 
     <div class="story-progress">
-      <div class="story-progress-fill" id="storyProgress"></div>
+      <div class="story-progress-fill"
+           id="storyProgress"></div>
     </div>
     <div class="story-counter">
       <span id="storyCounter">01</span>
       <small>/ 03</small>
     </div>
+
   </div>
 </section>
 
-<!-- SECTION 04: STATEMENT -->
+<!-- =====================================================
+     SECTION 04: FULL BLEED STATEMENT
+===================================================== -->
 <section class="statement" id="statement">
+
   <div class="statement-photo" id="statementPhoto"></div>
+
   <div class="container statement-inner">
     <span class="statement-line"></span>
-    <span class="eyebrow reveal">GOOD COMPANY · GOOD ENERGY</span>
+    <span class="eyebrow reveal">
+      GOOD COMPANY · GOOD ENERGY
+    </span>
     <h2 class="display reveal">
       Good Coffee.<br>
       <em>Beautiful Moments.</em>
@@ -1466,14 +1883,15 @@ button:focus-visible,a:focus-visible {
       A LITTLE MORE TIME FOR WHAT MATTERS
     </p>
   </div>
+
 </section>
 
 <!-- =====================================================
      SECTION 05: INSIDE LACUNA
-     UPDATED IMAGE 1: lacuna11.png
-     UPDATED IMAGE 2: lacuna12.png
+     lacuna11.png and lacuna12.png preserved
 ===================================================== -->
 <section class="discover section-pad" id="discover">
+
   <div class="container">
 
     <div class="discover-header">
@@ -1494,15 +1912,11 @@ button:focus-visible,a:focus-visible {
 
     <div class="discover-gallery">
 
-      <!-- NEW IMAGE 1: LARGE PHOTO UNDER INSIDE LACUNA -->
       <div class="discover-large reveal">
         <div class="photo">
-          <img
-            src="lacuna11.png"
-            alt="Inside Lacuna Phoenix, atmospheric café and lounge"
-            loading="lazy"
-            decoding="async"
-          >
+          <img src="lacuna11.png"
+               alt="Inside Lacuna Phoenix, atmospheric café and lounge"
+               loading="lazy" decoding="async">
         </div>
         <div class="photo-label">
           <span>THE ATMOSPHERE</span>
@@ -1512,15 +1926,11 @@ button:focus-visible,a:focus-visible {
 
       <div class="discover-side">
 
-        <!-- Existing supporting photo -->
         <figure class="reveal">
           <div class="photo">
-            <img
-              src="lacuna8.png"
-              alt="A glimpse of the Lacuna experience"
-              loading="lazy"
-              decoding="async"
-            >
+            <img src="lacuna8.png"
+                 alt="A glimpse of the Lacuna experience"
+                 loading="lazy" decoding="async">
           </div>
           <figcaption class="photo-label">
             <span>THE DETAILS</span>
@@ -1528,15 +1938,11 @@ button:focus-visible,a:focus-visible {
           </figcaption>
         </figure>
 
-        <!-- NEW IMAGE 2: PHOTO ABOVE THE QUOTE -->
         <figure class="reveal">
           <div class="photo">
-            <img
-              src="lacuna12.png"
-              alt="Beautiful café atmosphere and details at Lacuna Phoenix"
-              loading="lazy"
-              decoding="async"
-            >
+            <img src="lacuna12.png"
+                 alt="Beautiful café atmosphere and details at Lacuna Phoenix"
+                 loading="lazy" decoding="async">
           </div>
           <figcaption class="photo-label">
             <span>THE FEELING</span>
@@ -1550,19 +1956,27 @@ button:focus-visible,a:focus-visible {
         </p>
 
       </div>
+
     </div>
+
   </div>
 </section>
 
-<!-- SECTION 06: COFFEE & MOMENTS -->
+<!-- =====================================================
+     SECTION 06: COFFEE & MOMENTS
+===================================================== -->
 <section class="moments section-pad" id="coffee">
+
   <div class="container">
+
     <div class="moments-head">
       <span class="eyebrow section-index reveal">
         03 / SOMETHING FOR EVERY MOOD
       </span>
       <h2 class="display reveal">
-        Made for the <em class="accent">moments</em> that matter.
+        Made for the
+        <em class="accent">moments</em>
+        that matter.
       </h2>
       <p class="body-copy reveal">
         Whether you are finding your morning rhythm or making an
@@ -1571,13 +1985,16 @@ button:focus-visible,a:focus-visible {
     </div>
 
     <div class="moments-grid">
+
       <article class="moment reveal">
         <div class="moment-image">
-          <img src="lacuna2.png" alt="A thoughtfully prepared drink"
+          <img src="lacuna2.png"
+               alt="A thoughtfully prepared drink"
                loading="lazy" decoding="async">
         </div>
         <div class="moment-meta eyebrow">
-          <span>01 / THE DRINKS</span><span>↗</span>
+          <span>01 / THE DRINKS</span>
+          <span>↗</span>
         </div>
         <h3>Something to Sip.</h3>
         <p>
@@ -1588,11 +2005,13 @@ button:focus-visible,a:focus-visible {
 
       <article class="moment reveal">
         <div class="moment-image">
-          <img src="lacuna3.png" alt="The relaxed and welcoming café atmosphere"
+          <img src="lacuna3.png"
+               alt="The relaxed and welcoming café atmosphere"
                loading="lazy" decoding="async">
         </div>
         <div class="moment-meta eyebrow">
-          <span>02 / THE ATMOSPHERE</span><span>↗</span>
+          <span>02 / THE ATMOSPHERE</span>
+          <span>↗</span>
         </div>
         <h3>Room to Breathe.</h3>
         <p>
@@ -1603,11 +2022,13 @@ button:focus-visible,a:focus-visible {
 
       <article class="moment reveal">
         <div class="moment-image">
-          <img src="lacuna5.png" alt="Creative gatherings and social moments"
+          <img src="lacuna5.png"
+               alt="Creative gatherings and social moments"
                loading="lazy" decoding="async">
         </div>
         <div class="moment-meta eyebrow">
-          <span>03 / THE CONNECTION</span><span>↗</span>
+          <span>03 / THE CONNECTION</span>
+          <span>↗</span>
         </div>
         <h3>Stay for More.</h3>
         <p>
@@ -1615,112 +2036,173 @@ button:focus-visible,a:focus-visible {
           creative energy and conversations that linger.
         </p>
       </article>
+
     </div>
+
   </div>
 </section>
 
-<!-- SECTION 07: HORIZONTAL GALLERY -->
+<!-- =====================================================
+     SECTION 07: LIFE AT LACUNA
+     FINAL GALLERY IMAGE UPDATES
+
+     03 / 06 = lacuna3.png
+     05 / 06 = lacuna5.png
+
+     All other photos unchanged
+===================================================== -->
 <section class="gallery-section" id="gallery">
+
   <div class="container gallery-head">
+
     <div>
       <span class="eyebrow section-index reveal">
         04 / A VISUAL JOURNAL
       </span>
       <h2 class="display reveal">
         Life at
-        <em style="color:#e4c4a6;font-weight:400">Lacuna.</em>
+        <em style="color:#e4c4a6;font-weight:400">
+          Lacuna.
+        </em>
       </h2>
     </div>
 
     <div class="gallery-controls">
-      <button class="gallery-arrow" id="galleryPrev" type="button"
+
+      <button class="gallery-arrow"
+              id="galleryPrev"
+              type="button"
               aria-label="Previous photo">
         <svg viewBox="0 0 24 24">
           <path d="M20 12H4m7 7-7-7 7-7"
-                fill="none" stroke="currentColor" stroke-width="1.5"/>
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"/>
         </svg>
       </button>
-      <button class="gallery-arrow" id="galleryNext" type="button"
+
+      <button class="gallery-arrow"
+              id="galleryNext"
+              type="button"
               aria-label="Next photo">
         <svg><use href="#arrow-right"/></svg>
       </button>
+
     </div>
   </div>
 
-  <div class="gallery-track" id="galleryTrack"
-       role="region" aria-label="Lacuna photo gallery" tabindex="0">
+  <div class="gallery-track"
+       id="galleryTrack"
+       role="region"
+       aria-label="Lacuna photo gallery"
+       tabindex="0">
 
+    <!-- GALLERY 01 / 06 -->
     <figure class="gallery-item">
       <div class="photo">
-        <img src="lacuna1.png" alt="Lacuna lifestyle photograph one" loading="lazy">
+        <img src="lacuna1.png"
+             alt="A moment to unwind at Lacuna Phoenix"
+             loading="lazy" decoding="async">
       </div>
       <figcaption>
-        <span>A MOMENT TO UNWIND</span><span>01 / 06</span>
+        <span>A MOMENT TO UNWIND</span>
+        <span>01 / 06</span>
       </figcaption>
     </figure>
 
+    <!-- GALLERY 02 / 06 -->
     <figure class="gallery-item">
       <div class="photo">
-        <img src="lacuna4.png" alt="Lacuna lifestyle photograph two" loading="lazy">
+        <img src="lacuna4.png"
+             alt="The little details of Lacuna Phoenix"
+             loading="lazy" decoding="async">
       </div>
       <figcaption>
-        <span>THE LITTLE DETAILS</span><span>02 / 06</span>
+        <span>THE LITTLE DETAILS</span>
+        <span>02 / 06</span>
       </figcaption>
     </figure>
 
+    <!-- =========================================
+         UPDATED GALLERY 03 / 06
+         IMAGE: lacuna3.png
+    ========================================= -->
     <figure class="gallery-item">
       <div class="photo">
-        <img src="lacuna7.png" alt="Lacuna lifestyle photograph three" loading="lazy">
+        <img src="lacuna3.png"
+             alt="Everyday escapes at Lacuna Phoenix"
+             loading="lazy" decoding="async">
       </div>
       <figcaption>
-        <span>EVERYDAY ESCAPES</span><span>03 / 06</span>
+        <span>EVERYDAY ESCAPES</span>
+        <span>03 / 06</span>
       </figcaption>
     </figure>
 
+    <!-- GALLERY 04 / 06 -->
     <figure class="gallery-item">
       <div class="photo">
-        <img src="lacuna8.png" alt="Lacuna lifestyle photograph four" loading="lazy">
+        <img src="lacuna8.png"
+             alt="In good company at Lacuna Phoenix"
+             loading="lazy" decoding="async">
       </div>
       <figcaption>
-        <span>IN GOOD COMPANY</span><span>04 / 06</span>
+        <span>IN GOOD COMPANY</span>
+        <span>04 / 06</span>
       </figcaption>
     </figure>
 
+    <!-- =========================================
+         UPDATED GALLERY 05 / 06
+         IMAGE: lacuna5.png
+    ========================================= -->
     <figure class="gallery-item">
       <div class="photo">
-        <img src="lacuna9.png" alt="Lacuna lifestyle photograph five" loading="lazy">
+        <img src="lacuna5.png"
+             alt="The Lacuna feeling and atmosphere"
+             loading="lazy" decoding="async">
       </div>
       <figcaption>
-        <span>THE LACUNA FEELING</span><span>05 / 06</span>
+        <span>THE LACUNA FEELING</span>
+        <span>05 / 06</span>
       </figcaption>
     </figure>
 
+    <!-- GALLERY 06 / 06 -->
     <figure class="gallery-item">
       <div class="photo">
-        <img src="lacuna10.png" alt="Lacuna lifestyle photograph six" loading="lazy">
+        <img src="lacuna10.png"
+             alt="Stay a little longer at Lacuna Phoenix"
+             loading="lazy" decoding="async">
       </div>
       <figcaption>
-        <span>STAY A LITTLE LONGER</span><span>06 / 06</span>
+        <span>STAY A LITTLE LONGER</span>
+        <span>06 / 06</span>
       </figcaption>
     </figure>
+
   </div>
 </section>
 
 <!-- =====================================================
      SECTION 08: VISIT
-     UPDATED IMAGE 3: lacuna13.png
+     lacuna13.png preserved
 ===================================================== -->
 <section class="visit section-pad" id="visit">
+
   <div class="container visit-layout">
 
     <div>
+
       <span class="eyebrow section-index reveal">
         05 / FIND YOUR WAY HERE
       </span>
+
       <h2 class="display reveal">
         Your next favorite
         <em class="accent">moment is here.</em>
       </h2>
+
       <p class="body-copy visit-lead reveal">
         A little escape awaits in the heart of downtown Phoenix.
         Drop by for coffee, discover something new and
@@ -1728,89 +2210,125 @@ button:focus-visible,a:focus-visible {
       </p>
 
       <div class="visit-details reveal">
+
         <div>
           <strong>COME FIND US</strong>
-          <span>914 N 5th St<br>Phoenix, AZ 85004</span>
+          <span>
+            914 N 5th St<br>
+            Phoenix, AZ 85004
+          </span>
         </div>
+
         <div>
           <strong>THE NEIGHBORHOOD</strong>
-          <span>Roosevelt Row · Downtown Phoenix</span>
+          <span>
+            Roosevelt Row · Downtown Phoenix
+          </span>
         </div>
+
       </div>
 
       <a class="btn btn-dark reveal"
          href="https://www.google.com/maps/search/?api=1&query=Lacuna+Phoenix"
-         target="_blank" rel="noopener noreferrer">
+         target="_blank"
+         rel="noopener noreferrer">
         Get Directions
         <svg><use href="#arrow-up-right"/></svg>
       </a>
+
     </div>
 
-    <!-- NEW IMAGE 3: BESIDE THE VISIT HEADLINE -->
     <div class="visit-visual reveal">
+
       <div class="photo">
-        <img
-          src="lacuna13.png"
-          alt="Visit Lacuna Phoenix, located in the heart of downtown Phoenix"
-          loading="lazy"
-          decoding="async"
-        >
+        <img src="lacuna13.png"
+             alt="Visit Lacuna Phoenix in downtown Phoenix"
+             loading="lazy"
+             decoding="async">
       </div>
+
       <div class="visit-badge">
         Meet you<br>at Lacuna.
         <small>Phoenix, Arizona</small>
       </div>
+
     </div>
 
   </div>
 </section>
 
-<!-- SECTION 09: CLOSING -->
+<!-- =====================================================
+     SECTION 09: CLOSING
+===================================================== -->
 <section class="closing" id="closing">
+
   <div class="closing-image" id="closingImage"></div>
+
   <div class="container">
+
     <span class="eyebrow reveal">
       THE NEXT MOMENT IS YOURS
     </span>
+
     <h2 class="display reveal">
       Come for the coffee.<br>
       <em>Stay for the feeling.</em>
     </h2>
+
     <div class="closing-actions reveal">
+
       <a class="btn btn-light"
          href="https://www.google.com/maps/search/?api=1&query=Lacuna+Phoenix"
-         target="_blank" rel="noopener noreferrer">
+         target="_blank"
+         rel="noopener noreferrer">
         Find Us in Phoenix
         <svg><use href="#arrow-up-right"/></svg>
       </a>
+
       <a class="btn btn-outline-light" href="#home">
         Back to Top ↑
       </a>
+
     </div>
+
   </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 <footer class="footer">
+
   <div class="container">
+
     <div class="footer-main">
+
       <div>
-        <a class="brand footer-logo" href="#home"
+        <a class="brand footer-logo"
+           href="#home"
            aria-label="Lacuna Phoenix back to top">
-          <svg class="brand-mark" viewBox="0 0 40 46" fill="none" aria-hidden="true">
+
+          <svg class="brand-mark"
+               viewBox="0 0 40 46"
+               fill="none"
+               aria-hidden="true">
             <path d="M20 3C9 11 5 20 5 28a15 15 0 0030 0C35 20 31 11 20 3Z"
                   stroke="currentColor" stroke-width="1.4"/>
             <path d="M20 11v28M12 29h16M13 21c4-5 10-5 14 0"
                   stroke="currentColor" stroke-width="1.1"/>
-            <circle cx="20" cy="21" r="3" stroke="currentColor"/>
+            <circle cx="20" cy="21" r="3"
+                    stroke="currentColor"/>
           </svg>
+
           <span class="brand-words">
             <span class="brand-name">lacuna.</span>
             <span class="brand-city">PHOENIX</span>
           </span>
+
         </a>
+
         <p class="footer-intro">
           A place to find your pause, discover something
           different and share the good moments.
@@ -1818,6 +2336,7 @@ button:focus-visible,a:focus-visible {
       </div>
 
       <div class="footer-links">
+
         <div>
           <h4>EXPLORE</h4>
           <a href="#experience">Our Experience</a>
@@ -1825,39 +2344,57 @@ button:focus-visible,a:focus-visible {
           <a href="#gallery">Gallery</a>
           <a href="#visit">Find Us</a>
         </div>
+
         <div>
           <h4>VISIT US</h4>
-          <p>914 N 5th St<br>Phoenix, AZ 85004</p>
+          <p>
+            914 N 5th St<br>
+            Phoenix, AZ 85004
+          </p>
+
           <a href="https://www.google.com/maps/search/?api=1&query=Lacuna+Phoenix"
-             target="_blank" rel="noopener noreferrer">
+             target="_blank"
+             rel="noopener noreferrer">
             Open in Google Maps ↗
           </a>
+
           <a href="https://www.siplacuna.com/"
-             target="_blank" rel="noopener noreferrer">
+             target="_blank"
+             rel="noopener noreferrer">
             Official Website ↗
           </a>
         </div>
+
       </div>
     </div>
 
     <div class="footer-bottom">
-      <span>© <span id="year"></span> LACUNA PHOENIX. ALL RIGHTS RESERVED.</span>
-      <span>AN ESCAPE FROM THE ORDINARY.</span>
+      <span>
+        © <span id="year"></span>
+        LACUNA PHOENIX. ALL RIGHTS RESERVED.
+      </span>
+      <span>
+        AN ESCAPE FROM THE ORDINARY.
+      </span>
       <a href="#home">BACK TO TOP ↑</a>
     </div>
+
   </div>
 </footer>
 
+<!-- =====================================================
+     JAVASCRIPT — SCROLL AND INTERACTION SYSTEM
+===================================================== -->
 <script>
-/* ==========================================================
-   LACUNA PHOENIX — SCROLL AND INTERACTION SYSTEM
-========================================================== */
 (() => {
   "use strict";
 
   const $ = (s,root=document) => root.querySelector(s);
-  const $$ = (s,root=document) => [...root.querySelectorAll(s)];
-  const clamp = (x,a=0,b=1) => Math.min(b,Math.max(a,x));
+  const $$ = (s,root=document) =>
+    [...root.querySelectorAll(s)];
+
+  const clamp = (x,a=0,b=1) =>
+    Math.min(b,Math.max(a,x));
 
   const smoothstep = (a,b,x) => {
     const t=clamp((x-a)/(b-a));
@@ -1872,11 +2409,13 @@ button:focus-visible,a:focus-visible {
   const menuToggle=$("#menuToggle");
   const mobileNav=$("#mobileNav");
   const progressBar=$("#pageProgress");
+
   const story=$("#story");
   const storyImages=$$(".story-image");
   const storyPanels=$$(".story-panel");
   const storyProgress=$("#storyProgress");
   const storyCounter=$("#storyCounter");
+
   const heroImage=$("#heroImage");
   const statement=$("#statement");
   const statementPhoto=$("#statementPhoto");
@@ -1886,38 +2425,69 @@ button:focus-visible,a:focus-visible {
 
   $("#year").textContent=new Date().getFullYear();
 
-  /* ------------------------------------------------------
-     IMAGE LOAD ERROR HANDLING
-     If an asset fails, identify its container.
-  ------------------------------------------------------ */
+  /* =====================================================
+     IMAGE ERROR HANDLING
+  ===================================================== */
   $$(".photo img").forEach(img=>{
+
     const handleError=()=>{
       const container=img.closest(".photo");
-      if(container) container.classList.add("image-error");
-      console.warn("Unable to load image:",img.getAttribute("src"));
+
+      if(container){
+        container.classList.add("image-error");
+      }
+
+      console.warn(
+        "Unable to load image:",
+        img.getAttribute("src")
+      );
     };
+
     img.addEventListener("error",handleError);
-    if(img.complete && img.naturalWidth===0) handleError();
+
+    if(img.complete && img.naturalWidth===0){
+      handleError();
+    }
+
   });
 
-  /* ------------------------------------------------------
-     MOBILE MENU
-  ------------------------------------------------------ */
+  /* =====================================================
+     MOBILE NAVIGATION
+  ===================================================== */
   function closeMenu(){
     header.classList.remove("menu-open");
-    menuToggle.setAttribute("aria-expanded","false");
-    menuToggle.setAttribute("aria-label","Open navigation");
+
+    menuToggle.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      "Open navigation"
+    );
+
     mobileNav.inert=true;
   }
 
   menuToggle.addEventListener("click",()=>{
+
     const open=!header.classList.contains("menu-open");
+
     header.classList.toggle("menu-open",open);
-    menuToggle.setAttribute("aria-expanded",String(open));
+
     menuToggle.setAttribute(
-      "aria-label",open?"Close navigation":"Open navigation"
+      "aria-expanded",
+      String(open)
     );
+
+    menuToggle.setAttribute(
+      "aria-label",
+      open?"Close navigation":"Open navigation"
+    );
+
     mobileNav.inert=!open;
+
   });
 
   $$("#mobileNav a").forEach(a=>{
@@ -1925,94 +2495,180 @@ button:focus-visible,a:focus-visible {
   });
 
   document.addEventListener("keydown",e=>{
-    if(e.key==="Escape") closeMenu();
-  });
-
-  document.addEventListener("click",e=>{
-    if(header.classList.contains("menu-open")&&!header.contains(e.target)){
+    if(e.key==="Escape"){
       closeMenu();
     }
   });
 
-  /* ------------------------------------------------------
-     SMOOTH ANCHOR SCROLLING
-  ------------------------------------------------------ */
+  document.addEventListener("click",e=>{
+    if(
+      header.classList.contains("menu-open") &&
+      !header.contains(e.target)
+    ){
+      closeMenu();
+    }
+  });
+
+  /* =====================================================
+     SMOOTH NAVIGATION
+  ===================================================== */
   $$('a[href^="#"]').forEach(link=>{
+
     link.addEventListener("click",e=>{
+
       const target=$(link.getAttribute("href"));
+
       if(!target) return;
+
       e.preventDefault();
       closeMenu();
 
-      const offset=target.id==="home"?0:header.offsetHeight;
-      const y=window.scrollY+target.getBoundingClientRect().top-offset;
+      const offset=
+        target.id==="home"
+        ? 0
+        : header.offsetHeight;
+
+      const y=
+        window.scrollY +
+        target.getBoundingClientRect().top -
+        offset;
 
       window.scrollTo({
         top:Math.max(0,y),
-        behavior:reducedMotion.matches?"instant":"smooth"
+        behavior:reducedMotion.matches
+          ?"instant"
+          :"smooth"
       });
 
       if(history.replaceState){
-        history.replaceState(null,"",link.getAttribute("href"));
+        history.replaceState(
+          null,
+          "",
+          link.getAttribute("href")
+        );
       }
+
     });
+
   });
 
-  /* ------------------------------------------------------
-     REVEAL ANIMATIONS
-  ------------------------------------------------------ */
+  /* =====================================================
+     SCROLL REVEAL ANIMATIONS
+  ===================================================== */
   const revealEls=$$(".reveal");
 
-  if("IntersectionObserver" in window&&!reducedMotion.matches){
-    const observer=new IntersectionObserver(entries=>{
-      entries.forEach(entry=>{
-        if(entry.isIntersecting){
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },{
-      threshold:.09,
-      rootMargin:"0px 0px -25px 0px"
-    });
-    revealEls.forEach(el=>observer.observe(el));
+  if(
+    "IntersectionObserver" in window &&
+    !reducedMotion.matches
+  ){
+
+    const observer=new IntersectionObserver(
+      entries=>{
+
+        entries.forEach(entry=>{
+
+          if(entry.isIntersecting){
+
+            entry.target.classList.add(
+              "is-visible"
+            );
+
+            observer.unobserve(
+              entry.target
+            );
+
+          }
+
+        });
+
+      },
+      {
+        threshold:.09,
+        rootMargin:"0px 0px -25px 0px"
+      }
+    );
+
+    revealEls.forEach(
+      el=>observer.observe(el)
+    );
+
   }else{
-    revealEls.forEach(el=>el.classList.add("is-visible"));
+
+    revealEls.forEach(el=>{
+      el.classList.add("is-visible");
+    });
+
   }
 
-  /* ------------------------------------------------------
-     STICKY IMAGE PRELOADING
-  ------------------------------------------------------ */
-  const imageReady=new Array(storyImages.length).fill(false);
+  /* =====================================================
+     PRELOAD STICKY STORY IMAGES
+  ===================================================== */
+  const imageReady=new Array(
+    storyImages.length
+  ).fill(false);
 
   storyImages.forEach((img,i)=>{
+
     const markReady=()=>{
       imageReady[i]=true;
       requestTick();
     };
-    if(img.complete&&img.naturalWidth>0){
+
+    if(img.complete && img.naturalWidth>0){
+
       imageReady[i]=true;
+
     }else{
-      img.addEventListener("load",markReady,{once:true});
+
+      img.addEventListener(
+        "load",
+        markReady,
+        {once:true}
+      );
+
     }
+
     if(img.decode){
-      img.decode().then(markReady).catch(()=>{});
+
+      img.decode()
+        .then(markReady)
+        .catch(()=>{});
+
     }
+
   });
 
-  /* ------------------------------------------------------
-     CINEMATIC STORY TRANSITIONS
-  ------------------------------------------------------ */
+  /* =====================================================
+     STICKY CINEMATIC IMAGE TRANSITIONS
+  ===================================================== */
   function updateStory(){
+
     if(!story) return;
 
     const rect=story.getBoundingClientRect();
-    const travel=Math.max(1,rect.height-window.innerHeight);
-    const progress=clamp(-rect.top/travel);
+
+    const travel=Math.max(
+      1,
+      rect.height-window.innerHeight
+    );
+
+    const progress=clamp(
+      -rect.top/travel
+    );
+
     const indexProgress=progress*2;
 
-    const firstTransition=smoothstep(.18,.82,indexProgress);
-    const secondTransition=smoothstep(1.18,1.82,indexProgress);
+    const firstTransition=smoothstep(
+      .18,
+      .82,
+      indexProgress
+    );
+
+    const secondTransition=smoothstep(
+      1.18,
+      1.82,
+      indexProgress
+    );
 
     const weights=[
       1-firstTransition,
@@ -2021,164 +2677,335 @@ button:focus-visible,a:focus-visible {
     ];
 
     for(let i=1;i<weights.length;i++){
+
       if(!imageReady[i]){
+
         weights[i-1]+=weights[i];
         weights[i]=0;
+
       }
+
     }
 
-    const visibleIndex=weights[2]>.5?2:(weights[1]>.5?1:0);
+    const visibleIndex=
+      weights[2]>.5
+        ?2
+        :(weights[1]>.5?1:0);
 
     storyImages.forEach((img,i)=>{
+
       let opacity;
+
       if(i===0){
+
         opacity=1;
+
       }else if(i===1){
-        opacity=imageReady[1]?firstTransition:0;
+
+        opacity=imageReady[1]
+          ?firstTransition
+          :0;
+
       }else{
-        opacity=imageReady[2]?secondTransition:0;
+
+        opacity=imageReady[2]
+          ?secondTransition
+          :0;
+
       }
+
       img.style.opacity=String(opacity);
-      img.style.transform=`scale(${(
-        1.045+progress*.045-i*.012
-      ).toFixed(4)})`;
+
+      img.style.transform=
+        `scale(${(
+          1.045 +
+          progress*.045 -
+          i*.012
+        ).toFixed(4)})`;
+
     });
 
     const panelOpacities=[
-      1-smoothstep(.18,.40,progress),
-      smoothstep(.18,.40,progress)*
-      (1-smoothstep(.60,.82,progress)),
-      smoothstep(.60,.82,progress)
+
+      1-smoothstep(
+        .18,
+        .40,
+        progress
+      ),
+
+      smoothstep(
+        .18,
+        .40,
+        progress
+      ) *
+      (
+        1-smoothstep(
+          .60,
+          .82,
+          progress
+        )
+      ),
+
+      smoothstep(
+        .60,
+        .82,
+        progress
+      )
+
     ];
 
     storyPanels.forEach((panel,i)=>{
+
       const opacity=panelOpacities[i];
+
       panel.style.opacity=String(opacity);
+
       panel.style.transform=
-        `translate3d(0,${((1-opacity)*24).toFixed(2)}px,0)`;
-      panel.style.pointerEvents=opacity>.65?"auto":"none";
+        `translate3d(0,${
+          ((1-opacity)*24).toFixed(2)
+        }px,0)`;
+
+      panel.style.pointerEvents=
+        opacity>.65
+          ?"auto"
+          :"none";
+
       panel.setAttribute(
-        "aria-hidden",opacity<.25?"true":"false"
+        "aria-hidden",
+        opacity<.25
+          ?"true"
+          :"false"
       );
+
     });
 
-    storyProgress.style.transform=`scaleX(${progress})`;
-    storyCounter.textContent=String(visibleIndex+1).padStart(2,"0");
+    storyProgress.style.transform=
+      `scaleX(${progress})`;
+
+    storyCounter.textContent=
+      String(visibleIndex+1).padStart(2,"0");
+
   }
 
-  /* ------------------------------------------------------
+  /* =====================================================
      PARALLAX
-  ------------------------------------------------------ */
+  ===================================================== */
   function sectionProgress(el){
+
     const r=el.getBoundingClientRect();
+
     return clamp(
-      (window.innerHeight-r.top)/(window.innerHeight+r.height)
+      (window.innerHeight-r.top) /
+      (window.innerHeight+r.height)
     );
+
   }
 
   function updateParallax(){
+
     const isMobile=window.innerWidth<768;
+
     const factor=isMobile?.35:1;
 
     if(heroImage){
+
       const p=clamp(
-        window.scrollY/Math.max(1,window.innerHeight)
+        window.scrollY /
+        Math.max(1,window.innerHeight)
       );
+
       const scale=1.05+p*.055*factor;
+
       heroImage.style.transform=
-        `translate3d(0,${(-p*28*factor).toFixed(2)}px,0) scale(${scale.toFixed(4)})`;
+        `translate3d(0,${
+          (-p*28*factor).toFixed(2)
+        }px,0) scale(${
+          scale.toFixed(4)
+        })`;
+
     }
 
-    if(statementPhoto&&statement){
+    if(statementPhoto && statement){
+
       const p=sectionProgress(statement)-.5;
+
       statementPhoto.style.transform=
-        `translate3d(0,${(-p*75*factor).toFixed(2)}px,0) scale(1.06)`;
+        `translate3d(0,${
+          (-p*75*factor).toFixed(2)
+        }px,0) scale(1.06)`;
+
     }
 
-    if(closingImage&&closing){
+    if(closingImage && closing){
+
       const p=sectionProgress(closing)-.5;
+
       closingImage.style.transform=
-        `translate3d(0,${(-p*65*factor).toFixed(2)}px,0) scale(1.05)`;
+        `translate3d(0,${
+          (-p*65*factor).toFixed(2)
+        }px,0) scale(1.05)`;
+
     }
 
-    if(experienceImg&&!isMobile){
+    if(experienceImg && !isMobile){
+
       const ex=$(".experience");
       const r=ex.getBoundingClientRect();
-      if(r.bottom>0&&r.top<window.innerHeight){
+
+      if(
+        r.bottom>0 &&
+        r.top<window.innerHeight
+      ){
+
         const p=sectionProgress(ex)-.5;
+
         experienceImg.style.transform=
-          `translate3d(0,${(-p*40).toFixed(2)}px,0)`;
+          `translate3d(0,${
+            (-p*40).toFixed(2)
+          }px,0)`;
+
       }
+
     }else if(experienceImg){
+
       experienceImg.style.transform="none";
+
     }
+
   }
 
-  /* ------------------------------------------------------
-     REDUCED MOTION
-  ------------------------------------------------------ */
+  /* =====================================================
+     REDUCED MOTION ACCESSIBILITY
+  ===================================================== */
   function updateReducedStory(){
+
     storyImages.forEach((img,i)=>{
-      img.style.opacity=i===0?"1":"0";
+
+      img.style.opacity=
+        i===0?"1":"0";
+
       img.style.transform="none";
+
     });
+
     storyPanels.forEach((panel,i)=>{
-      panel.style.opacity=i===0?"1":"0";
+
+      panel.style.opacity=
+        i===0?"1":"0";
+
       panel.style.transform="none";
+
       panel.setAttribute(
-        "aria-hidden",i===0?"false":"true"
+        "aria-hidden",
+        i===0?"false":"true"
       );
+
     });
+
     storyProgress.style.transform="scaleX(0)";
     storyCounter.textContent="01";
+
   }
 
-  /* ------------------------------------------------------
-     SCROLL ENGINE
-  ------------------------------------------------------ */
+  /* =====================================================
+     CENTRAL SCROLL ENGINE
+  ===================================================== */
   let scheduled=false;
 
   function update(){
-    scheduled=false;
-    const doc=document.documentElement;
-    const maxScroll=Math.max(
-      1,doc.scrollHeight-window.innerHeight
-    );
-    const p=clamp(window.scrollY/maxScroll);
 
-    progressBar.style.transform=`scaleX(${p})`;
-    header.classList.toggle("scrolled",window.scrollY>35);
+    scheduled=false;
+
+    const doc=document.documentElement;
+
+    const maxScroll=Math.max(
+      1,
+      doc.scrollHeight-window.innerHeight
+    );
+
+    const p=clamp(
+      window.scrollY/maxScroll
+    );
+
+    progressBar.style.transform=
+      `scaleX(${p})`;
+
+    header.classList.toggle(
+      "scrolled",
+      window.scrollY>35
+    );
 
     if(reducedMotion.matches){
+
       updateReducedStory();
-      [heroImage,statementPhoto,closingImage].forEach(el=>{
-        if(el) el.style.transform="none";
+
+      [
+        heroImage,
+        statementPhoto,
+        closingImage
+      ].forEach(el=>{
+
+        if(el){
+          el.style.transform="none";
+        }
+
       });
+
     }else{
+
       updateStory();
       updateParallax();
+
     }
+
   }
 
   function requestTick(){
+
     if(!scheduled){
+
       scheduled=true;
+
       requestAnimationFrame(update);
+
     }
+
   }
 
-  window.addEventListener("scroll",requestTick,{passive:true});
-  window.addEventListener("resize",requestTick,{passive:true});
-  window.addEventListener("load",requestTick);
-  reducedMotion.addEventListener?.("change",requestTick);
+  window.addEventListener(
+    "scroll",
+    requestTick,
+    {passive:true}
+  );
 
-  /* ------------------------------------------------------
-     GALLERY CONTROLS
-  ------------------------------------------------------ */
+  window.addEventListener(
+    "resize",
+    requestTick,
+    {passive:true}
+  );
+
+  window.addEventListener(
+    "load",
+    requestTick
+  );
+
+  reducedMotion.addEventListener?.(
+    "change",
+    requestTick
+  );
+
+  /* =====================================================
+     HORIZONTAL GALLERY BUTTONS
+  ===================================================== */
   const galleryTrack=$("#galleryTrack");
 
   function moveGallery(direction){
-    const item=$(".gallery-item",galleryTrack);
+
+    const item=$(
+      ".gallery-item",
+      galleryTrack
+    );
+
     if(!item) return;
 
     const gap=parseFloat(
@@ -2186,15 +3013,33 @@ button:focus-visible,a:focus-visible {
     )||0;
 
     galleryTrack.scrollBy({
-      left:direction*(item.getBoundingClientRect().width+gap),
-      behavior:reducedMotion.matches?"instant":"smooth"
+
+      left:direction*(
+        item.getBoundingClientRect().width+
+        gap
+      ),
+
+      behavior:reducedMotion.matches
+        ?"instant"
+        :"smooth"
+
     });
+
   }
 
-  $("#galleryPrev").addEventListener("click",()=>moveGallery(-1));
-  $("#galleryNext").addEventListener("click",()=>moveGallery(1));
+  $("#galleryPrev").addEventListener(
+    "click",
+    ()=>moveGallery(-1)
+  );
 
+  $("#galleryNext").addEventListener(
+    "click",
+    ()=>moveGallery(1)
+  );
+
+  /* Initial page state */
   requestTick();
+
 })();
 </script>
 
